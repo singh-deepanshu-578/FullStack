@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block main %}
+  <h2>Login</h2>
+  <div class="form-container">
+    <form method="post">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  {% if error %}
+    <p style="color: red; font-weight: bold";></p>
+  {% endif %}
+{% endblock %}

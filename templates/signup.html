@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block main %}
+  <h2>Sign Up</h2>
+  <div class="form-container">
+    <form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Sign up</button>
+  </form>
+  </div>
+
+{% if msg %}
+  <p style="color: green;">{{ msg }}</p>
+{% endif %}
+{% endblock %}
